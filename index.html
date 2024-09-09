@@ -78,7 +78,7 @@
                     <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#reviews">Reviews</a>
                 </li>
             </ul>
         </div>
@@ -159,14 +159,122 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section id="reviews" class="container text-center my-5">
+        <h2>Reviews</h2>
+
+        <!-- View Counter -->
+        <h3>Page Views: <span id="viewCount">Loading...</span></h3>
+
+        <!-- Review Form -->
+        <form id="reviewForm" class="my-4">
+            <h4>Leave a Review</h4>
+            <input type="text" id="reviewName" class="form-control" placeholder="Your Name" required><br>
+            <textarea id="reviewText" class="form-control" placeholder="Your Review" required></textarea><br>
+            <input type="number" id="reviewRating" class="form-control" min="1" max="5" placeholder="Rating (1-5)" required><br>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+
+        <!-- Reviews Section -->
+        <div id="reviewsContainer">
+            Loading reviews...
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Kiarash Shahedi. All Rights Reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Firebase Integration -->
+    <script type="module">
+        // Import Firebase dependencies
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getDatabase, ref, onValue, push, update, increment } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
+            authDomain: "kiarashshahedi-github-io.firebaseapp.com",
+            databaseURL: "https://kiarashshahedi-github-io-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "kiarashshahedi-github-io",
+            storageBucket: "kiarashshahedi-github-io.appspot.com",
+            messagingSenderId: "545043533329",
+            appId: "1:545043533329:web:36710cb038ea645114abb0",
+            measurementId: "G-2WSLLJNHFW"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Page View Counter
+        const pageViewsRef = ref(db, 'pageViews');
+        
+        // Increment page views on page load
+        update(pageViewsRef, {
+            count: increment(1)
+        });
+
+        // Display updated page views in the HTML
+        onValue(pageViewsRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data && data.count) {
+                document.getElementById('viewCount').innerText = data.count;
+            }
+        });
+
+        // Submit Review
+        document.getElementById('reviewForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('reviewName').value;
+            const review = document.getElementById('reviewText').value;
+            const rating = document.getElementById('reviewRating').value;
+
+            // Reference to the reviews in the database
+            const reviewsRef = ref(db, 'reviews');
+
+            // Push new review
+            push(reviewsRef, {
+                name: name,
+                review: review,
+                rating: rating,
+                timestamp: new Date().toISOString()
+            }).then(() => {
+                alert('Review submitted!');
+                document.getElementById('reviewForm').reset();
+            });
+        });
+
+        // Display Reviews
+        const reviewsContainer = document.getElementById('reviewsContainer');
+        const reviewsRef = ref(db, 'reviews');
+
+        // Fetch and display reviews
+        onValue(reviewsRef, (snapshot) => {
+            reviewsContainer.innerHTML = ''; // Clear previous reviews
+            snapshot.forEach((reviewSnapshot) => {
+                const review = reviewSnapshot.val();
+                const reviewElement = `
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">${review.name}</h5>
+                            <p class="card-text">${review.review}</p>
+                            <p class="card-text">Rating: ${review.rating}/5</p>
+                            <small class="text-muted">${new Date(review.timestamp).toLocaleString()}</small>
+                        </div>
+                    </div>
+                `;
+                reviewsContainer.innerHTML += reviewElement;
+            });
+        });
+    </script>
+
+    <!-- External JavaScript & Bootstrap dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
