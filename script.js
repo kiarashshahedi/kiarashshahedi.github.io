@@ -11,7 +11,8 @@ $(document).ready(function() {
     });
 });
 
-
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+import { getDatabase, ref, set, push, onValue, update, transaction } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -25,15 +26,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 // Page View Counter
-db.ref('pageViews').transaction(function (currentViews) {
-    return (currentViews || 0) + 1;
-});
+const pageViewsRef = ref(db, 'pageViews');
+transaction(pageViewsRef, (currentViews) => (currentViews || 0) + 1);
 
-db.ref('pageViews').on('value', (snapshot) => {
+onValue(pageViewsRef, (snapshot) => {
     const views = snapshot.val();
     document.getElementById('viewCount').innerText = views;
 });
@@ -46,7 +46,8 @@ form.addEventListener('submit', (e) => {
     const review = document.getElementById('reviewText').value;
     const rating = document.getElementById('reviewRating').value;
 
-    db.ref('reviews').push({
+    const reviewsRef = ref(db, 'reviews');
+    push(reviewsRef, {
         name: name,
         review: review,
         rating: rating,
@@ -59,8 +60,8 @@ form.addEventListener('submit', (e) => {
 
 // Display Reviews
 const reviewsContainer = document.getElementById('reviewsContainer');
-
-db.ref('reviews').on('value', (snapshot) => {
+const reviewsRef = ref(db, 'reviews');
+onValue(reviewsRef, (snapshot) => {
     reviewsContainer.innerHTML = ''; // Clear previous reviews
     snapshot.forEach((reviewSnapshot) => {
         const review = reviewSnapshot.val();
@@ -77,5 +78,3 @@ db.ref('reviews').on('value', (snapshot) => {
         reviewsContainer.innerHTML += reviewElement;
     });
 });
-
-
