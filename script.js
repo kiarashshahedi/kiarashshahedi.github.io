@@ -15,13 +15,13 @@ $(document).ready(function() {
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
+  authDomain: "kiarashshahedi-github-io.firebaseapp.com",
+  projectId: "kiarashshahedi-github-io",
+  storageBucket: "kiarashshahedi-github-io.appspot.com",
+  messagingSenderId: "545043533329",
+  appId: "1:545043533329:web:db4dd1ad59d752d314abb0",
+  measurementId: "G-WK4NFPY3GY"
 };
 
 // Initialize Firebase
