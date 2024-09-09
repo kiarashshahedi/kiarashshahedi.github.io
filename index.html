@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>John Doe - Resume</title>
+    <title>My Resume Website</title>
     
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -61,30 +64,147 @@
             </div>
         </section>
 
-        <section id="skills" class="mb-5">
-            <h2 class="text-center">Skills</h2>
-            <ul class="list-inline text-center">
-                <li class="list-inline-item"><i class="fab fa-html5"></i> HTML5</li>
-                <li class="list-inline-item"><i class="fab fa-css3-alt"></i> CSS3</li>
-                <li class="list-inline-item"><i class="fab fa-js"></i> JavaScript</li>
-                <li class="list-inline-item"><i class="fab fa-python"></i> Python</li>
-            </ul>
-        </section>
+        <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Technical Skills</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fab fa-python fa-4x skill-icon text-primary"></i>
+                            <h5 class="card-title mt-3">Python</h5>
+                            <p class="card-text">Extensive experience building scalable applications, automation scripts, and APIs using Python.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fab fa-docker fa-4x skill-icon text-info"></i>
+                            <h5 class="card-title mt-3">Docker</h5>
+                            <p class="card-text">Containerized microservices with Docker to ensure fast deployments and easy scalability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-server fa-4x skill-icon text-success"></i>
+                            <h5 class="card-title mt-3">Django</h5>
+                            <p class="card-text">Developed full-stack web applications using Django for rapid, secure, and scalable development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <section id="contact" class="text-center">
-            <h2>Contact Me</h2>
-            <p>Email: johndoe@gmail.com</p>
-            <a href="mailto:johndoe@gmail.com" class="btn btn-primary">Email Me</a>
-        </section>
-    </div>
-    </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-database fa-4x skill-icon text-warning"></i>
+                            <h5 class="card-title mt-3">PostgreSQL</h5>
+                            <p class="card-text">Worked with PostgreSQL for handling complex queries and data modeling in web applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-network-wired fa-4x skill-icon text-secondary"></i>
+                            <h5 class="card-title mt-3">Redis</h5>
+                            <p class="card-text">Used Redis for caching, improving the performance and scalability of web applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fab fa-js fa-4x skill-icon text-danger"></i>
+                            <h5 class="card-title mt-3">JavaScript</h5>
+                            <p class="card-text">Enhanced front-end interactivity using JavaScript, improving the user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-project-diagram fa-4x skill-icon text-dark"></i>
+                            <h5 class="card-title mt-3">Design Patterns</h5>
+                            <p class="card-text">Applied software design patterns like MVC, Singleton, and Factory to improve application structure and maintainability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-microchip fa-4x skill-icon text-primary"></i>
+                            <h5 class="card-title mt-3">FastAPI</h5>
+                            <p class="card-text">Developed high-performance APIs using FastAPI, optimizing for speed and reliability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm skill-card">
+                        <div class="card-body">
+                            <i class="fas fa-database fa-4x skill-icon text-info"></i>
+                            <h5 class="card-title mt-3">MySQL</h5>
+                            <p class="card-text">Managed relational databases with MySQL, optimizing queries for performance and scalability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Custom JS for animations -->
+    <!-- Page View Counter Section -->
+    <section id="page-view-counter" class="py-3 text-center">
+        <h5>Total Page Views</h5>
+        <p id="viewCount">0</p>
+    </section>
+
+    <!-- Review Form Section -->
+    <section id="reviews" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Submit a Review</h2>
+            <form id="reviewForm" class="text-center">
+                <div class="form-group">
+                    <input type="text" id="reviewName" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="reviewText" class="form-control" placeholder="Write your review" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="reviewRating" class="form-control" placeholder="Rating (1-5)" min="1" max="5" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Display Reviews Section -->
+    <section id="display-reviews" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">User Reviews</h2>
+            <div id="reviewsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    
+    <!-- Custom JS -->
     <script src="script.js"></script>
+
+    <!-- jQuery for Animations -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
