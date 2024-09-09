@@ -1,6 +1,10 @@
-// Firebase Configuration
+// Import Firebase modules
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getDatabase, ref, onValue, push, update, increment } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+// Firebase configuration (use your actual credentials)
 const firebaseConfig = {
-    apiKey: "AIzaSyA02GTM...",
+    apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
     authDomain: "kiarashshahedi-github-io.firebaseapp.com",
     projectId: "kiarashshahedi-github-io",
     storageBucket: "kiarashshahedi-github-io.appspot.com",
@@ -10,18 +14,23 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 // Page View Counter
-const pageViewsRef = db.ref('pageViews');
-pageViewsRef.transaction(function (currentViews) {
-    return (currentViews || 0) + 1;
+const pageViewsRef = ref(db, 'pageViews');
+
+// Increment page views when the page is loaded
+update(pageViewsRef, {
+    count: increment(1)
 });
 
-pageViewsRef.on('value', (snapshot) => {
-    const views = snapshot.val();
-    document.getElementById('viewCount').innerText = views;
+// Display updated page views in the HTML
+onValue(pageViewsRef, (snapshot) => {
+    const data = snapshot.val();
+    if (data && data.count) {
+        document.getElementById('viewCount').innerText = data.count;
+    }
 });
 
 // Submit Review
@@ -32,12 +41,15 @@ document.getElementById('reviewForm').addEventListener('submit', function (e) {
     const review = document.getElementById('reviewText').value;
     const rating = document.getElementById('reviewRating').value;
 
-    const reviewsRef = db.ref('reviews');
-    reviewsRef.push({
+    // Reference for reviews in the database
+    const reviewsRef = ref(db, 'reviews');
+
+    // Push the review to the database
+    push(reviewsRef, {
         name: name,
         review: review,
         rating: rating,
-        timestamp: new Date().toString()
+        timestamp: new Date().toISOString()
     }).then(() => {
         alert('Review submitted!');
         document.getElementById('reviewForm').reset();
@@ -46,10 +58,11 @@ document.getElementById('reviewForm').addEventListener('submit', function (e) {
 
 // Display Reviews
 const reviewsContainer = document.getElementById('reviewsContainer');
-const reviewsRef = db.ref('reviews');
+const reviewsRef = ref(db, 'reviews');
 
-reviewsRef.on('value', (snapshot) => {
-    reviewsContainer.innerHTML = '';
+// Fetch reviews from the database and display them
+onValue(reviewsRef, (snapshot) => {
+    reviewsContainer.innerHTML = ''; // Clear the existing reviews
     snapshot.forEach((reviewSnapshot) => {
         const review = reviewSnapshot.val();
         const reviewElement = `
