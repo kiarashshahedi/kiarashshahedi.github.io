@@ -13,63 +13,28 @@ header h1 {
     font-size: 3rem;
 }
 
-header p {
-    font-size: 1.5rem;
+header .btn {
+    margin-top: 20px;
+}
+
+.timeline {
+    border-left: 4px solid #343a40;
+    padding-left: 20px;
 }
 
 .timeline-item {
-    margin: 20px 0;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .timeline-item h4 {
-    font-weight: bold;
     font-size: 1.2rem;
 }
 
-.card {
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-ul.list-inline li {
-    font-size: 1.2rem;
-    margin: 10px;
-}
-
-
-
-/* Custom Skill Section Styles */
-.skill-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: none;
-    border-radius: 10px;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+.card-title {
+    font-size: 1.25rem;
 }
 
 .skill-icon {
-    transition: color 0.3s ease;
-}
-
-.skill-card:hover .skill-icon {
-    color: #17a2b8;
-}
-
-/* Page view counter */
-#page-view-counter {
-    background-color: #f8f9fa;
-    padding: 20px;
-}
-
-/* Review Section */
-#reviews, #display-reviews {
-    background-color: #f0f0f5;
-    padding: 30px;
-    border-radius: 10px;
+    margin-bottom: 10px;
 }
