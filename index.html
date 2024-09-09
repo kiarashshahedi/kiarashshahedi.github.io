@@ -186,6 +186,30 @@
             <div id="reviewsContainer"></div>
         </div>
     </section>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
+    authDomain: "kiarashshahedi-github-io.firebaseapp.com",
+    databaseURL: "https://kiarashshahedi-github-io-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "kiarashshahedi-github-io",
+    storageBucket: "kiarashshahedi-github-io.appspot.com",
+    messagingSenderId: "545043533329",
+    appId: "1:545043533329:web:36710cb038ea645114abb0",
+    measurementId: "G-2WSLLJNHFW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
     <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
