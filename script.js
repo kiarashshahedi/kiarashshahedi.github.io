@@ -77,3 +77,27 @@ db.ref('reviews').on('value', (snapshot) => {
         reviewsContainer.innerHTML += reviewElement;
     });
 });
+
+
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
+    authDomain: "kiarashshahedi-github-io.firebaseapp.com",
+    projectId: "kiarashshahedi-github-io",
+    storageBucket: "kiarashshahedi-github-io.appspot.com",
+    messagingSenderId: "545043533329",
+    appId: "1:545043533329:web:db4dd1ad59d752d314abb0",
+    measurementId: "G-WK4NFPY3GY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
