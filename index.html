@@ -6,47 +6,64 @@
     <title>My Resume - Python Django Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">My Resume</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="resume.pdf" download>Download CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="text-center bg-dark text-white py-5">
         <div class="container">
-            <button id="toggleLang" class="btn toggle-btn">Switch to فارسی</button>
-            <h1 class="animate__animated animate__fadeInDown" data-en="Python Django Developer" data-fa="توسعه‌دهنده Python و Django">Python Django Developer</h1>
-            <p class="animate__animated animate__fadeInUp" data-en="Experienced in building scalable and optimized web applications." data-fa="با تجربه در ساخت برنامه‌های وب مقیاس‌پذیر و بهینه">Experienced in building scalable and optimized web applications.</p>
-            <a href="#about" class="btn animate__animated animate__zoomIn" data-en="Learn More" data-fa="بیشتر بدانید">Learn More</a>
+            <h1 class="animate__animated animate__fadeInDown">Python Django Developer</h1>
+            <p class="animate__animated animate__fadeInUp">Experienced in building scalable and optimized web applications.</p>
+            <a href="#about" class="btn btn-primary animate__animated animate__zoomIn">Learn More</a>
         </div>
     </header>
 
-    <section id="about" class="section">
+    <!-- About Section -->
+    <section id="about" class="py-5">
         <div class="container">
-            <h2 class="section-title" data-en="About Me" data-fa="درباره من">About Me</h2>
-            <p data-en="An experienced developer with expertise in Python and Django, creating secure, scalable, and efficient web applications." 
-               data-fa="توسعه‌دهنده با تجربه در زمینه Python و Django با سابقه‌ای قوی در ساخت برنامه‌های تحت وب مقیاس‌پذیر، امن و کارآمد.">
-               An experienced developer with expertise in Python and Django, creating secure, scalable, and efficient web applications.
+            <h2 class="text-center">About Me</h2>
+            <p class="text-center">
+                Experienced Python and Django developer with expertise in secure, scalable, and efficient web application development.
             </p>
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title" data-en="Key Skills" data-fa="مهارت‌های کلیدی">Key Skills</h2>
-            <ul class="skills-list">
-                <li data-en="Languages: Python, JavaScript, HTML, CSS" data-fa="زبان‌ها: پایتون، جاوااسکریپت، HTML، CSS">Languages: Python, JavaScript, HTML, CSS</li>
-                <li data-en="Frameworks & Libraries: Django, Django REST Framework, Flask, React.js" data-fa="فریم‌ورک‌ها و کتابخانه‌ها: Django، Django REST Framework، Flask، React.js">Frameworks & Libraries: Django, Django REST Framework, Flask, React.js</li>
-                <li data-en="Databases: PostgreSQL, MySQL, SQLite, MongoDB" data-fa="پایگاه‌داده‌ها: PostgreSQL، MySQL، SQLite، MongoDB">Databases: PostgreSQL, MySQL, SQLite, MongoDB</li>
-                <li data-en="Version Control: Git, GitHub, GitLab, Bitbucket" data-fa="کنترل نسخه: Git، GitHub، GitLab، Bitbucket">Version Control: Git, GitHub, GitLab, Bitbucket</li>
-                <li data-en="DevOps & Deployment: Docker, Kubernetes, AWS, Heroku" data-fa="DevOps و استقرار: Docker، Kubernetes، AWS، Heroku">DevOps & Deployment: Docker, Kubernetes, AWS, Heroku</li>
+            <h2 class="text-center">Key Skills</h2>
+            <ul class="list-unstyled text-center">
+                <li>Languages: Python, JavaScript, HTML, CSS</li>
+                <li>Frameworks: Django, Flask, React.js</li>
+                <li>Databases: PostgreSQL, MySQL, MongoDB</li>
+                <li>Version Control: Git, GitHub</li>
+                <li>DevOps: Docker, Kubernetes, AWS</li>
             </ul>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p data-en="© 2024 My Resume - Designed by You" data-fa="© ۲۰۲۴ رزومه من - طراحی‌شده توسط شما">© 2024 My Resume - Designed by You</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 My Resume - Designed by You</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
