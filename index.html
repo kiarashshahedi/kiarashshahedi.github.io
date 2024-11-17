@@ -3,278 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiarash Shahedi Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            animation: gradient 5s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .navbar {
-            margin-bottom: 50px;
-        }
-
-        .profile-pic {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-        }
-
-        .card-body {
-            transition: transform 0.2s;
-        }
-
-        .card-body:hover {
-            transform: translateY(-10px);
-        }
-
-        .footer {
-            margin-top: 50px;
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    <title>My Resume - Python Django Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Kiarash Shahedi</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#reviews">Reviews</a>
-                </li>
-            </ul>
+    <header id="home">
+        <div class="container">
+            <button id="toggleLang" class="btn toggle-btn">Switch to فارسی</button>
+            <h1 class="animate__animated animate__fadeInDown" data-en="Python Django Developer" data-fa="توسعه‌دهنده Python و Django">Python Django Developer</h1>
+            <p class="animate__animated animate__fadeInUp" data-en="Experienced in building scalable and optimized web applications." data-fa="با تجربه در ساخت برنامه‌های وب مقیاس‌پذیر و بهینه">Experienced in building scalable and optimized web applications.</p>
+            <a href="#about" class="btn animate__animated animate__zoomIn" data-en="Learn More" data-fa="بیشتر بدانید">Learn More</a>
         </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="text-center mt-5">
-        <img src="your_photo.jpg" alt="Kiarash Shahedi" class="profile-pic img-fluid">
-        <h1 class="display-4">Kiarash Shahedi</h1>
-        <p class="lead">26 years old | 5 years of programming</p>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container text-center my-5">
-        <h2>About Me</h2>
-        <p>I am a passionate developer with 5 years of experience in various technologies. I love working with Python, Django, JavaScript, and many more tools. I’m highly proficient with Linux and have built various software solutions, including systems for national oil distribution and online shops.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container text-center my-5">
-        <h2>Skills</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <i class="fab fa-python fa-3x"></i>
-                <p>Python</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-server fa-3x"></i>
-                <p>Django, Django Rest Framework</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fab fa-js-square fa-3x"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-database fa-3x"></i>
-                <p>PostgreSQL, MySQL, SQLite3</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fab fa-docker fa-3x"></i>
-                <p>Docker</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-toolbox fa-3x"></i>
-                <p>Redis, Design Patterns, FastAPI</p>
-            </div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-fa="درباره من">About Me</h2>
+            <p data-en="An experienced developer with expertise in Python and Django, creating secure, scalable, and efficient web applications." 
+               data-fa="توسعه‌دهنده با تجربه در زمینه Python و Django با سابقه‌ای قوی در ساخت برنامه‌های تحت وب مقیاس‌پذیر، امن و کارآمد.">
+               An experienced developer with expertise in Python and Django, creating secure, scalable, and efficient web applications.
+            </p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container text-center my-5">
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">GSPMC</h5>
-                        <p class="card-text">A control system for gas stations for شرکت ملی پخش فراورده های نفتی ایران.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">TakKharid</h5>
-                        <p class="card-text">An online shop for a variety of products.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">PoDoZhi</h5>
-                        <p class="card-text">An online pet shop for pet products.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Key Skills" data-fa="مهارت‌های کلیدی">Key Skills</h2>
+            <ul class="skills-list">
+                <li data-en="Languages: Python, JavaScript, HTML, CSS" data-fa="زبان‌ها: پایتون، جاوااسکریپت، HTML، CSS">Languages: Python, JavaScript, HTML, CSS</li>
+                <li data-en="Frameworks & Libraries: Django, Django REST Framework, Flask, React.js" data-fa="فریم‌ورک‌ها و کتابخانه‌ها: Django، Django REST Framework، Flask، React.js">Frameworks & Libraries: Django, Django REST Framework, Flask, React.js</li>
+                <li data-en="Databases: PostgreSQL, MySQL, SQLite, MongoDB" data-fa="پایگاه‌داده‌ها: PostgreSQL، MySQL، SQLite، MongoDB">Databases: PostgreSQL, MySQL, SQLite, MongoDB</li>
+                <li data-en="Version Control: Git, GitHub, GitLab, Bitbucket" data-fa="کنترل نسخه: Git، GitHub، GitLab، Bitbucket">Version Control: Git, GitHub, GitLab, Bitbucket</li>
+                <li data-en="DevOps & Deployment: Docker, Kubernetes, AWS, Heroku" data-fa="DevOps و استقرار: Docker، Kubernetes، AWS، Heroku">DevOps & Deployment: Docker, Kubernetes, AWS, Heroku</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="container text-center my-5">
-        <h2>Reviews</h2>
-
-        <!-- View Counter -->
-        <h3>Page Views: <span id="viewCount">Loading...</span></h3>
-
-        <!-- Review Form -->
-        <form id="reviewForm" class="my-4">
-            <h4>Leave a Review</h4>
-            <input type="text" id="reviewName" class="form-control" placeholder="Your Name" required><br>
-            <textarea id="reviewText" class="form-control" placeholder="Your Review" required></textarea><br>
-            <input type="number" id="reviewRating" class="form-control" min="1" max="5" placeholder="Rating (1-5)" required><br>
-            <button type="submit" class="btn btn-primary">Submit Review</button>
-        </form>
-
-        <!-- Reviews Section -->
-        <div id="reviewsContainer">
-            Loading reviews...
+    <footer>
+        <div class="container">
+            <p data-en="© 2024 My Resume - Designed by You" data-fa="© ۲۰۲۴ رزومه من - طراحی‌شده توسط شما">© 2024 My Resume - Designed by You</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Kiarash Shahedi. All Rights Reserved.</p>
     </footer>
 
-    <!-- Firebase Integration -->
-    <script type="module">
-        // Import Firebase dependencies
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-        import { getDatabase, ref, onValue, push, update, increment } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
-
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyA02GTMGPHPvT1QcsvtYE2HslYRrl8y9ks",
-            authDomain: "kiarashshahedi-github-io.firebaseapp.com",
-            databaseURL: "https://kiarashshahedi-github-io-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "kiarashshahedi-github-io",
-            storageBucket: "kiarashshahedi-github-io.appspot.com",
-            messagingSenderId: "545043533329",
-            appId: "1:545043533329:web:36710cb038ea645114abb0",
-            measurementId: "G-2WSLLJNHFW"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-
-        // Page View Counter
-        const pageViewsRef = ref(db, 'pageViews');
-        
-        // Increment page views on page load
-        update(pageViewsRef, {
-            count: increment(1)
-        });
-
-        // Display updated page views in the HTML
-        onValue(pageViewsRef, (snapshot) => {
-            const data = snapshot.val();
-            if (data && data.count) {
-                document.getElementById('viewCount').innerText = data.count;
-            }
-        });
-
-        // Submit Review
-        document.getElementById('reviewForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('reviewName').value;
-            const review = document.getElementById('reviewText').value;
-            const rating = document.getElementById('reviewRating').value;
-
-            // Reference to the reviews in the database
-            const reviewsRef = ref(db, 'reviews');
-
-            // Push new review
-            push(reviewsRef, {
-                name: name,
-                review: review,
-                rating: rating,
-                timestamp: new Date().toISOString()
-            }).then(() => {
-                alert('Review submitted!');
-                document.getElementById('reviewForm').reset();
-            });
-        });
-
-        // Display Reviews
-        const reviewsContainer = document.getElementById('reviewsContainer');
-        const reviewsRef = ref(db, 'reviews');
-
-        // Fetch and display reviews
-        onValue(reviewsRef, (snapshot) => {
-            reviewsContainer.innerHTML = ''; // Clear previous reviews
-            snapshot.forEach((reviewSnapshot) => {
-                const review = reviewSnapshot.val();
-                const reviewElement = `
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">${review.name}</h5>
-                            <p class="card-text">${review.review}</p>
-                            <p class="card-text">Rating: ${review.rating}/5</p>
-                            <small class="text-muted">${new Date(review.timestamp).toLocaleString()}</small>
-                        </div>
-                    </div>
-                `;
-                reviewsContainer.innerHTML += reviewElement;
-            });
-        });
-    </script>
-
-    <!-- External JavaScript & Bootstrap dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
