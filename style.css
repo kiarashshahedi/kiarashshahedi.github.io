@@ -2,6 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
@@ -9,11 +11,22 @@ header {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
 }
 
 /* Sections */
 section {
     padding: 40px 0;
+    text-align: center;
 }
 
 .bg-light {
@@ -24,7 +37,10 @@ section {
 footer {
     background: #333;
     color: white;
+    padding: 20px 0;
+    text-align: center;
 }
+
 /* Skills Section */
 .skill-card {
     background: white;
@@ -41,4 +57,76 @@ footer {
 
 .skill-card i {
     display: block;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #6a11cb;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 15px 10px;
+}
+
+.navbar .nav-link {
+    font-size: 1rem;
+    color: white;
+    padding: 8px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background: #2575fc;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .btn {
+    margin-left: 10px;
+}
+
+/* RTL/LTR Support */
+body.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .navbar-nav {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.ltr .navbar-nav {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+body.rtl .navbar-toggler {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+body.rtl .skill-card h5, 
+body.rtl .skill-card p {
+    text-align: right;
+}
+
+body.ltr .skill-card h5, 
+body.ltr .skill-card p {
+    text-align: left;
+}
+
+/* Navbar Collapse Alignment Fix */
+body.rtl .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+/* Navbar Toggler for RTL */
+body.rtl .navbar-toggler-icon {
+    float: left;
 }
