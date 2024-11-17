@@ -1,17 +1,23 @@
-// Language Toggle Script
-const toggleButton = document.getElementById('toggleLang');
-const elementsToTranslate = document.querySelectorAll('[data-en]');
+document.getElementById("toggleLang").addEventListener("click", function () {
+    const body = document.body;
+    const isLTR = body.classList.contains("ltr");
 
-let currentLang = 'en';
+    if (isLTR) {
+        body.classList.remove("ltr");
+        body.classList.add("rtl");
+        body.setAttribute("dir", "rtl");
+        this.textContent = "Switch to English";
+    } else {
+        body.classList.remove("rtl");
+        body.classList.add("ltr");
+        body.setAttribute("dir", "ltr");
+        this.textContent = "تغییر به فارسی";
+    }
 
-toggleButton.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'fa' : 'en';
-    toggleButton.textContent = currentLang === 'en' ? 'Switch to فارسی' : 'تغییر به English';
-    
-    elementsToTranslate.forEach(element => {
-        element.textContent = element.getAttribute(`data-${currentLang}`);
+    // Update text content dynamically
+    document.querySelectorAll("[data-en]").forEach(el => {
+        const enText = el.getAttribute("data-en");
+        const faText = el.getAttribute("data-fa");
+        el.textContent = isLTR ? faText : enText;
     });
-
-    // Update text direction for Persian
-    document.body.style.direction = currentLang === 'fa' ? 'rtl' : 'ltr';
 });
