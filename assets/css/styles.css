@@ -1,21 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+.navbar {
+    padding: 1rem;
 }
 .hero {
-    background: url('../images/banner.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 100vh;
+    background: url('assets/images/background.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    color: white;
 }
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
-
-#portfolio .card {
-    transition: 0.3s;
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
 }
-#portfolio .card:hover {
-    transform: scale(1.05);
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
 }
-
