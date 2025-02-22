@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Kiarash Shahedi</a>
@@ -19,7 +20,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -28,41 +28,83 @@
         </div>
     </nav>
     
-    <header id="home" class="hero">
+    <!-- Home Section -->
+    <header id="home" class="vh-100 d-flex align-items-center text-white text-center" style="background: url('assets/images/background.jpg') center/cover no-repeat;">
         <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p class="lead">Python Backend Developer | Django Expert | Web Applications</p>
+            <h1 class="display-3">Welcome to My Portfolio</h1>
+            <p class="lead">Python Backend Developer | Django Expert | Web Applications </p>
             <a href="#portfolio" class="btn btn-primary mt-3">View My Work</a>
         </div>
     </header>
     
-    <section id="about" class="py-5 bg-light text-center">
-        <div class="container">
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
             <h2>About Me</h2>
             <p class="lead">I am a passionate backend developer with expertise in Python and Django, building high-performance web applications.</p>
         </div>
     </section>
     
-    <section id="skills" class="py-5 text-center">
-        <div class="container">
+<!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container text-center">
             <h2>Skills & Technologies</h2>
             <div class="row mt-4">
                 <div class="col-md-4">
                     <h4><i class="fas fa-code"></i> Languages</h4>
-                    <p>Python, JavaScript, Bash, HTML5, CSS3</p>
+                    <p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python-logo-notext.svg" class="skill-icon"> Python
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="skill-icon"> JavaScript
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Bash_Logo_Colored.svg" class="skill-icon"> Bash
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/HTML5_logo_and_wordmark.svg" class="skill-icon"> HTML5
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo_and_wordmark.svg" class="skill-icon"> CSS3
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <h4><i class="fas fa-book"></i> Frameworks & Libraries</h4>
-                    <p>Django, Django REST Framework, FastAPI, Flask, Celery</p>
+                     <p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" class="skill-icon"> Django
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Django_REST_framework_logo.svg" class="skill-icon"> Django REST Framework
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/FastAPI_logo.svg" class="skill-icon"> FastAPI
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Flask_logo.svg" class="skill-icon"> Flask
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Celery_Logo.png" class="skill-icon"> Celery
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <h4><i class="fas fa-database"></i> Databases</h4>
-                    <p>PostgreSQL, MySQL, MongoDB, Redis</p>
+                    <p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_logo.svg" class="skill-icon"> PostgreSQL
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/MySQL_logo.svg" class="skill-icon"> MySQL
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/MongoDB_Logo.svg" class="skill-icon"> MongoDB
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Redis_Logo.svg" class="skill-icon"> Redis
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
+                    <p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Docker_logo.png" class="skill-icon"> Docker
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" class="skill-icon"> Kubernetes
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Amazon_Web_Services_Logo.svg" class="skill-icon"> AWS
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" class="skill-icon"> Linux
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Git-logo.svg" class="skill-icon"> Git
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <h4><i class="fas fa-project-diagram"></i> Architectural & Software Engineering Skills</h4>
+                    <ul class="list-unstyled">
+                        <li>✅ Microservices & Distributed Systems</li>
+                        <li>✅ Monolithic System Optimization</li>
+                        <li>✅ Scalability & High Availability</li>
+                        <li>✅ CI/CD Pipelines & Deployment Automation</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- Resume Section -->
     <section id="resume" class="py-5 bg-light text-center">
         <div class="container">
             <h2>Resume</h2>
@@ -71,15 +113,17 @@
         </div>
     </section>
     
-    <section id="contact" class="py-5 text-center">
-        <div class="container">
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
             <h2>Contact Me</h2>
             <p>Email: your.email@example.com</p>
             <p>GitHub: <a href="https://github.com/kiarashshahedi" target="_blank">@kiarashshahedi</a></p>
         </div>
     </section>
     
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2025 Kiarash Shahedi. All Rights Reserved.</p>
     </footer>
     
