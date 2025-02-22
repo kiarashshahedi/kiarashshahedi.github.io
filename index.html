@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiarash Shahedi | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            padding: 1rem;
+        }
+        .hero {
+            height: 100vh;
+            background: url('assets/images/background.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+        .footer {
+            background-color: #212529;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .comming {
+            background-color: #a8d4fe;
+            color: rgb(0, 0, 0);
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -20,7 +54,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -30,93 +64,108 @@
     
     <!-- Home Section -->
     <header id="home" class="vh-100 d-flex align-items-center text-white text-center" style="background: url('assets/images/background.jpg') center/cover no-repeat;">
-        <div class="container">
-            <h1 class="display-3">Welcome to My Portfolio</h1>
-            <p class="lead">Python Backend Developer | Django Expert | Web Applications </p>
-            <a href="#portfolio" class="btn btn-primary mt-3">View My Work</a>
+        <div class="col-md-6 container comming rounded-5 ">
+            <h1 class="display-5 text-black fw-bold mt-1">Welcome to My Portfolio</h1>
+            <p class="text-dark lead fw-bold">Python Backend Developer | Django Expert | Web Applications </p>
+            <a href="#skills" class="btn btn-primary fw-bold mb-1 comming">View My Work</a>
         </div>
     </header>
     
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>About Me</h2>
-            <p class="lead">I am a passionate backend developer with expertise in Python and Django, building high-performance web applications.</p>
+    <section id="about" class="py-5 bg-light ">
+        <div class="container text-start">
+                <h2 class="mt-5">About Me</h2>
+                <p class="lead">I am a passionate backend developer with expertise in Python and Django, building high-performance web applications.</p>
         </div>
     </section>
     
 <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>Skills & Technologies</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <h4><i class="fas fa-code"></i> Languages</h4>
-                   <p>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon"> Python
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon"> JavaScript
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="skill-icon"> Bash
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon"> HTML5
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon"> CSS3
-                    </p>
+    <section id="skills" class=" bg-light">
+        <div class="container-fluid text-center">
+            <h3 class="text-start ms-3 ">Skills & Technologies </h3>
+            <hr>
+            <div class="border border-5 rounded-5 ">
+                <div class=" col-md-12 ">
+                    <h4 class="mt-3"><i class="fas fa-code"></i> Languages</h4>
+                    <div class="text-center me-5 ms-5 mt-5 mb-5">
+                        <p>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon"> Python
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon"> JavaScript
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="skill-icon"> Bash
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon"> HTML5
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon"> CSS3
+                            </p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h4><i class="fas fa-book"></i> Frameworks & Libraries</h4>
-                    <p>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="skill-icon"> Django
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="skill-icon"> Flask
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="skill-icon"> FastAPI
-                        <img src="https://github.com/celery/celery/blob/main/docs/images/celery_512.png?raw=true" class="skill-icon"> Celery
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h4><i class="fas fa-database"></i> Databases</h4>
-                   <p>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon"> PostgreSQL
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon"> MySQL
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skill-icon"> MongoDB
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="skill-icon"> Redis
-                    </p>
+
+                <div class="d-flex  mt-1 ">
+
+                    <div class="col-md-4  shadow rounded-5 ">
+                        <h4 class="mt-3"><i class="fas fa-book"></i> Frameworks & Libraries</h4>
+                        <div class="me-5 ms-5 mt-5 mb-5">
+                            <p>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="skill-icon"> Django
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="skill-icon"> Flask
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="skill-icon"> FastAPI
+                                <img src="https://github.com/celery/celery/blob/main/docs/images/celery_512.png?raw=true" class="skill-icon"> Celery
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 shadow ms-1 me-1 rounded-5  ">
+                        <h4 class="mt-3"><i class="fas fa-database"></i> Databases</h4>
+                        <div class="me-5 ms-5 mt-5 mb-5">
+
+                            <p>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon"> PostgreSQL
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon"> MySQL
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skill-icon"> MongoDB
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="skill-icon"> Redis
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4  shadow rounded-5  ">
+                        <h4 class="mt-3"><i class="fas fa-cloud text-center"></i> DevOps & Cloud</h4>
+                        <div class="me-5 ms-5 mt-5 mb-5">
+
+                            <p>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="skill-icon"> Docker
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" class="skill-icon"> Kubernetes
+                                <img src="https://cdn.worldvectorlogo.com/logos/amazon-web-services.svg" class="skill-icon"> AWS
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" class="skill-icon"> Linux
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon"> Git
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
-                    <p>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="skill-icon"> Docker
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" class="skill-icon"> Kubernetes
-                        <img src="https://cdn.worldvectorlogo.com/logos/amazon-web-services.svg" class="skill-icon"> AWS
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" class="skill-icon"> Linux
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon"> Git
-                    </p>
-                </div>
-                <div class="col-md-8">
-                    <h4><i class="fas fa-project-diagram"></i> Architectural & Software Engineering Skills</h4>
-                    <ul class="list-unstyled">
-                        <li>✅ Microservices & Distributed Systems</li>
-                        <li>✅ Monolithic System Optimization</li>
-                        <li>✅ Scalability & High Availability</li>
-                        <li>✅ CI/CD Pipelines & Deployment Automation</li>
-                    </ul>
-                </div>
+            <div class="col-md-12 mt-5 mb-5 ms-3 text-start ">
+                <h4><i class="fas fa-project-diagram"></i> Architectural & Software Engineering Skills</h4>
+                <ul class="ms-3 list-unstyled">
+                    <li>✅ Microservices & Distributed Systems</li>
+                    <li>✅ Monolithic System Optimization</li>
+                    <li>✅ Scalability & High Availability</li>
+                    <li>✅ CI/CD Pipelines & Deployment Automation</li>
+                </ul>
             </div>
         </div>
     </section>
     
     <!-- Resume Section -->
-    <section id="resume" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2>Resume</h2>
-            <p>Download my resume below.</p>
-            <a href="resume.pdf" class="btn btn-dark" download>Download Resume</a>
+    <section id="resume" class="py-5 bg-dark text-light text-center">
+        <div class="container-fluid">
+            <h2>Resume (CV)</h2>
+            <p>You can Download my resume below.</p>
+            <a href="resume.pdf" class="btn btn-warning" download>Download Resume</a>
         </div>
     </section>
     
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container text-center">
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
+            <h3>Contact Me</h3>
+            <p>Email: shahedikiarash@gmail.com</p>
             <p>GitHub: <a href="https://github.com/kiarashshahedi" target="_blank">@kiarashshahedi</a></p>
         </div>
     </section>
@@ -129,3 +178,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
