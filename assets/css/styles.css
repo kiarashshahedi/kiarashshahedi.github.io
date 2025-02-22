@@ -1,0 +1,11 @@
+body {
+    padding-top: 60px;
+}
+.hero {
+    background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
