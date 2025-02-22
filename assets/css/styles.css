@@ -1,11 +1,21 @@
 body {
-    padding-top: 60px;
+    font-family: Arial, sans-serif;
 }
 .hero {
-    background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
-    height: 100vh;
+    background: url('../images/banner.jpg') no-repeat center center/cover;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
+.hero h1 {
+    font-size: 3rem;
+}
+
+#portfolio .card {
+    transition: 0.3s;
+}
+#portfolio .card:hover {
+    transform: scale(1.05);
+}
+
